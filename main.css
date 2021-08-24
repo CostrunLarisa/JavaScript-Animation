@@ -1,0 +1,138 @@
+body{
+    padding:50px;
+}
+.shape{
+    animation: fall 4s linear;
+    animation-iteration-count:infinite;
+}
+.area {
+    width : 80%;
+    height : 60%;
+    border-style : solid;
+    border-color : black;
+    overflow:hidden;
+}
+
+.triangle{
+    position:relative;
+    border-color:black transparent transparent transparent;
+    border-style:dashed;
+    border-width:80px;
+    height:0;
+    width:0;
+    animation-delay: 1s;
+}
+.circle {
+    position: relative;
+    background: lightblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 1s;
+}
+    
+.pentagon {
+      position: relative;
+      height: 0;
+      width: 100px;
+      border-top: 100px solid yellow;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      top:10px;
+    animation-delay: 1s;
+}
+
+.pentagon:after{
+      position: relative;
+      content: '';
+      border-bottom: 100px solid yellow;
+      border-left: 114px solid transparent;
+      border-right: 105px solid transparent;
+      bottom: 216px;
+      left: -60px;
+    }
+
+.ellipse {
+    position: relative;
+    background: red;
+    border-radius: 50%;
+    width: 200px;
+    height: 100px;
+    animation-delay: 1s;
+
+}
+.square {
+    background-color:greenyellow;
+    position:relative;
+    border-color:greenyellow greenyellow greenyellow greenyellow;
+    border-style:dashed;
+    border-width:80px;
+    height:0.5vw;
+    width:0.5vw;
+    animation-delay: 1s;
+
+}
+.hexagon{
+    animation-delay: 1s;
+}
+.hexagonContent{
+    width: 104px;
+    height: 60px;
+    background-color: #ff7b25;
+    position:relative;
+}
+.hexagonTop{
+    width: 0;
+    border-bottom: 30px solid #ff7b25;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+    position:relative;
+}
+.hexagonBottom {
+    width: 0;
+    border-top: 30px solid #ff7b25;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+    position:relative;
+}
+.star {
+      width: 0.2vw;
+      height: 0.1vw;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid #6b5b95;
+      position: relative;
+      animation-delay: 1s;
+}
+.star:after {
+      width: 0.2vw;
+      height: 0.1vw;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid #6b5b95;
+      position: absolute;
+      content: "";
+      top: 30px;
+      left: -50px;
+    }
+
+
+.textZone{
+     display: inline-grid;
+    grid-column-gap: 50px 50px;
+    grid-template-columns: auto auto ;
+    width:80%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.field2{
+     border-left: 1px solid black;
+}
+
+@keyframes fall{
+  0%{transform: translateY(0%)}
+  100%{transform: translateY(120vw)}
+}
